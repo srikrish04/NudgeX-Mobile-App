@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Reminder">
+
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/viewSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textOn="Location based tasks"
+        android:textOff="Date based tasks"
+        android:gravity="center"
+        style="@style/SwitchTheme"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:hint="change view"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/todayView"
+        android:layout_below="@+id/viewSwitch"
+        android:visibility="gone"
+        android:orientation="vertical">
+    <com.wefika.calendar.CollapseCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskList"
+        android:layout_below="@+id/calendar"
+        android:divider="@null"
+        android:layout_margin="20dp"
+        />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/locationView"
+        android:orientation="vertical"
+        android:layout_below="@+id/viewSwitch"
+
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/locationTextTitle"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:textColor="@color/DarkNudge"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskListForLocation"
+            android:layout_below="@+id/calendar"
+            android:divider="@null"
+            android:layout_margin="20dp"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="@color/colorNudge"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewReminderActivity"
+    >
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="#FFFFFF"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Task"
+        android:id="@+id/start"
+        android:layout_marginTop="20dp"
+
+        android:layout_alignParentStart="true">
+        <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/newTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+            android:background="#FFFFFF"
+        android:inputType="textPersonName"
+         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/dateStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/start"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Choose Date"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_notes"
+            app:endIconContentDescription="Choose Date"
+
+            android:background="#FFFFFF">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/taskDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="#FFFFFF"
+        android:editable="false"
+
+        />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:id="@+id/imgTaskDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/timeStart"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="20dp"
+        android:background="#FFFFFF"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/dateStart"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_timer"
+        app:endIconContentDescription="Choose Time"
+        android:hint="Choose Time">
+    <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/taskTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:editable="false"
+       />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/descStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="#FFFFFF"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/timeStart"
+
+        android:hint="Description">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="#FFFFFF"
+        android:inputType="textPersonName"
+         />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <fragment android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_location"
+        app:endIconContentDescription="Choose Time"
+        android:layout_below="@+id/descStart"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/colorNudge"
+        android:layout_marginBottom="20dp"
+        android:text="Create"/>
+</RelativeLayout>

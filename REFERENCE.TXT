@@ -1,0 +1,9 @@
+# NudgeX
+
+References
+
+[1]blazsolar, “blazsolar/android-collapse-calendar-view,” GitHub, 03-May-2015. [Online]. Available: https://github.com/blazsolar/android-collapse-calendar-view. [Accessed: 02-Dec-2019].
+
+[2]“Using an ArrayAdapter with ListView | CodePath Android Cliffnotes,” Codepath.com, 2012. [Online]. Available: https://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView. [Accessed: 02-Dec-2019].
+
+[3]“Fragments  |  Android Developers,” Android Developers, 2019. [Online]. Available: https://developer.android.com/guide/components/fragments. [Accessed: 02-Dec-2019].

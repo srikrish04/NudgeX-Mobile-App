@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NudgeX</string>
+    <string name="title_activity_reminder">ReminderActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_lists">Test lists</string>
+    <string name="action_board">Test board </string>
+    <string name="action_disable_drag">Disable drag</string>
+    <string name="action_enable_drag">Enable drag</string>
+    <string name="action_list">List (drag on touch image icon)</string>
+    <string name="action_grid_vertical">Grid vertical (drag on long press)</string>
+    <string name="action_grid_horizontal">Grid horizontal (drag on long press)</string>
+    <string name="msg_no_columns">No Columns Yet!</string>
+    <string name="no_boards_yet">No Boards yet!!</string>
+    <string name="insert_image_menu">Insert Image</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_notes"
+        android:enabled="true"
+        android:icon="@drawable/ic_notes"
+        android:title="Notes"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_reminders"
+        android:enabled="true"
+        android:icon="@drawable/ic_reminders"
+        android:title="Reminders"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_boards"
+        android:enabled="true"
+        android:icon="@drawable/ic_boards"
+        android:title="Boards"
+        app:showAsAction="ifRoom" />
+</menu>

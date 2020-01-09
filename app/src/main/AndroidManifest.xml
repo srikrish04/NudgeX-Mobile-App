@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nudgex">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:name=".recievers.AppNotification"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_nudgex_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_nudgex_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".NewReminderActivity"
+            android:label="Create"
+            ></activity>
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignInActivity" />
+
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AddBoardActivity" />
+
+        <receiver android:name=".recievers.AlarmReceiver"
+
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="Intent.ACTION_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <activity android:name=".board.view.BoardViewActivity" />
+        <activity android:name=".board.view.AddColumnActivity" />
+        <activity android:name=".board.view.AddTaskActivity" />
+        <activity android:name=".notes.views.NoteViewActivity" />
+        <activity android:name=".notes.ImageViewActivity" />
+        <activity android:name=".notes.views.AddScribbleActivity" />
+
+    </application>
+
+</manifest>

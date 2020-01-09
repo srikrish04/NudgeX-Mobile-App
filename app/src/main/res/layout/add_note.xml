@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:elevation="16dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/noteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:elevation="2dp"
+            android:hint="Title"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="4dp"
+            android:textSize="34sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/noteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="0dp"
+
+            android:height="150dp"
+
+            android:hint="Enter a Note"
+            android:inputType="textMultiLine"
+            android:paddingVertical="0dp"
+            android:textSize="20sp"
+            android:elevation="10dp"/>
+    </LinearLayout>
+</ScrollView>
